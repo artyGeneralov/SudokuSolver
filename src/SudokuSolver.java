@@ -114,20 +114,6 @@ public class SudokuSolver {
 		}
 	}
 
-	public static boolean checkPuzzle(int[][] puzzle) {
-		for (int row = 0; row < PUZZLE_SIZE; row++) {
-			if (!checkRow(puzzle, row))
-				return false;
-			for (int col = 0; col < PUZZLE_SIZE; col++) {
-				if (!checkColumn(puzzle, col))
-					return false;
-				if (!checkIsland(puzzle, row, col))
-					return false;
-			}
-		}
-		return true;
-	}
-
 	/*
 	 * Check if a number is ok for column true for ok, false for wrong
 	 */
