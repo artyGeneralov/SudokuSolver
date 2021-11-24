@@ -36,17 +36,17 @@ public class SudokuSolver {
 				System.out.printf("Please input number for row %d, column %d: ", i+1, j+1);
 				cur_puzzle[i][j] = input.nextInt();
 			}
+		input.close();
 	}
 	/*
 	 * public solve method, invokes an overloaded solve method for recursion
-	 * purposes.
 	 */
 	public static void solve(int[][] puzzle) {
 		solve(puzzle, 0, 0);
 	}
 
 	/*
-	 * Overloaded solve method for recursion purposes
+	 * Overloaded solve method for recursion
 	 */
 	private static void solve(int[][] puzzle, int curRow, int curCol) {
 
@@ -115,7 +115,7 @@ public class SudokuSolver {
 	}
 
 	/*
-	 * Check if a number is ok for column true for ok, false for wrong
+	 * Check if a number is ok for row true for ok, false for wrong
 	 */
 	private static boolean checkRow(int[][] puzzle, int row) {
 		for (int i = 0; i < PUZZLE_SIZE; i++) {
